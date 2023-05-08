@@ -3,7 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # To playaround with the weather-app
+
 https://6458f232077e6b2d832b1aea--reliable-pony-5f667e.netlify.app/
+
+Weather provider : https://open-meteo.com/en/docs
+
 
 ## Available Scripts
 
