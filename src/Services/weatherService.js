@@ -2,6 +2,7 @@ import { DateTime } from "luxon";
 
 const WEATHER_URL = "https://api.open-meteo.com/v1";
 const BASE_URL = "https://geocoding-api.open-meteo.com/v1";
+const GEO_URL = "https://nominatim.openstreetmap.org";
 
 const getCityData = (infoType, searchParams) => {
   const url = new URL(BASE_URL + "/" + infoType);
@@ -10,7 +11,7 @@ const getCityData = (infoType, searchParams) => {
 };
 
 const getCityFromLocation = (infoType, searchParams) => {
-  const url = new URL("https://nominatim.openstreetmap.org" + "/" + infoType);
+  const url = new URL(GEO_URL + "/" + infoType);
   url.search = new URLSearchParams({ ...searchParams });
   return fetch(url).then((res) => res.json());
 };
